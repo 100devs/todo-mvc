@@ -10,9 +10,18 @@
 <body>
     <h1>Todos</h1>
     <ul>
+    <!-- to dos is all the objects i got back -> loop through the array of objects
+    el is the element for the cycle of the for each
+    pull off first element to build first li and keep on going-->
+    <!-- el = each document from our database-->
     <% todos.forEach( el => { %>
+        <!-- using data-id as a data set and it's grabbing the id of the document from the database. it's unique for each item-->
+        <!-- data set is how you grab any data attribute in your db-->
         <li class='todoItem' data-id='<%=el._id%>'>
-            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+            <!-- a conditional to trigger completed or not-->
+            <span class='<%= el.completed === true ? 'completed' : 'not'%>'>
+                <!-- plug in to do text-->
+                <%= el.todo %></span>
             <span class='del'> Delete </span>
         </li>
     <% }) %>    
