@@ -1,7 +1,9 @@
+// using mongoose to make a connection to mongo db
 const mongoose = require('mongoose')
 
+// this const exports an async funtion which we call in our server JS -- connect DB
 const connectDB = async () => {
-  try {
+  try { //familiar db string that is housed in the env
     const conn = await mongoose.connect(process.env.DB_STRING, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -16,3 +18,6 @@ const connectDB = async () => {
 }
 
 module.exports = connectDB
+
+
+//environment variables are stored in the config folder 

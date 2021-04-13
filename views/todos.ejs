@@ -11,6 +11,8 @@
     <h1>Todos</h1>
     <ul>
     <% todos.forEach( el => { %>
+        <!-- we use the random _id that gets made with each object in the DB. Each li gets that ._id as a class. so now every new li is unique -->
+        <!-- id's are really used for keeping track of things such as assigning each post to a user  -->
         <li class='todoItem' data-id='<%=el._id%>'>
             <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
             <span class='del'> Delete </span>
@@ -20,6 +22,7 @@
 
     <h2>Things left to do: <%= left %></h2>
 
+    <!-- action with todos/createTodo and make a post request when we submit to the post reuest to todos router -->
     <form action="/todos/createTodo" method='POST'>
         <input type="text" placeholder="Enter Todo Item" name='todoItem'>
         <input type="submit">
