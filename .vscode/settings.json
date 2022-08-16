@@ -1,4 +1,5 @@
 {
-    "editor.fontSize": 38,
-    "terminal.integrated.fontSize": 60
+    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
+    "screencastMode.fontSize": 32
 }
