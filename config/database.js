@@ -15,4 +15,4 @@ const connectDB = async () => { //promise syntax
   }
 }
 
-module.exports = connectDB // be able to export this to other files using connectDB as a variable name
+module.exports = connectDB // be able to export this for use by other files using connectDB as a variable name
