@@ -1,3 +1,7 @@
+body {
+    background: #DFEDEB;
+}
+
 h1{
     color: red;
 }
@@ -5,6 +9,22 @@ h1{
     text-decoration: line-through;
     color: gray;
 }
-.not{
+/* .not{
     text-decoration: underline;
+} */
+
+
+.description {
+   
+    display: block;
+   
+}
+
+.todoItem {
+    background: #aebcc1;
+    margin-top: 1rem;
+    max-width: 25rem;
+    color: ivory;
+    padding: 1rem;
+    border-radius: 0.2em;
 }

@@ -13,15 +13,28 @@
     <% todos.forEach( el => { %>
         <li class='todoItem' data-id='<%=el._id%>'>
             <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+            
+                <span class='description'><%= el.description %></span>
+           
+            <span><%= el.tag %></span>
             <span class='del'> Delete </span>
         </li>
+
     <% }) %>    
     </ul>
+
+
 
     <h2>Things left to do: <%= left %></h2>
 
     <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+        <input type="text" placeholder="Task" name='todoItem'>
+        <div>
+            <textarea name="todoDescription" cols=16 rows=11 placeholder='Description'></textarea>
+        </div>
+
+        <!-- <input type="text" placeholder="description" name='todoDescription'> -->
+        <input type="text" placeholder="Tag" name='todoTag'>
         <input type="submit">
     </form>
 

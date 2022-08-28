@@ -8,6 +8,17 @@ const TodoSchema = new mongoose.Schema({
   completed: {
     type: Boolean,
     required: true,
+  },
+  description: {
+    type: String,
+    required: false
+  },
+  date: {
+    type: Date
+  },
+  tag: {
+    type: String,
+    required: true
   }
 })
 
