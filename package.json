@@ -1,7 +1,6 @@
 {
   "name": "todolist-review-app",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
@@ -16,5 +15,14 @@
     "mongodb": "^3.6.5",
     "mongoose": "^5.12.3",
     "nodemon": "^2.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameskarr/todo-mvc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jameskarr/todo-mvc/issues"
+  },
+  "homepage": "https://github.com/jameskarr/todo-mvc#readme",
+  "description": ""
 }
