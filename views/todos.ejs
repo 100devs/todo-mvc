@@ -7,36 +7,67 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <h1>Todos</h1>
-    <ul>
-    <% todos.forEach( el => { %>
-        <li class='todoItem' data-id='<%=el._id%>'>
-            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+<body class='bg-gradient-to-r from-indigo-200 via-red-200 to-indigo-200'>
+
+    <header class='flex justify-between mb-12 py-4 px-8'>
+        <h1 class='text-6xl font-logo font-bold text-gray-600'>Habitly</h1>
+       
+
+        <ul class='hidden md:flex flex-row items-center align-middle gap-4'>
+            <li><a href='/' class='font-bold text-gray-600'>Home</a></li>
+            <li><a href='#' class='font-bold text-gray-600'>Habitly</a></li>
+            <li><a href='#' class='font-bold text-gray-600'>About</a></li>
+        </ul>
+
+        <button class='md:hidden'>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+              </svg>
+              
+        </button>
+    </header>
+
+    
+    <h2 class='text-2xl font-logo text-center text-gray-600'>Tasks left: <%= left %></h2>
+            <main class='flex gap-4 justify-around mt-6'>
+                <form action="/todos/createTodo" method='POST' class=''>
+                    <input type="text" placeholder="Task" name='todoItem'  class='rounded mb-2 p-2'>
+                    <div class=>
+                        <textarea name="todoDescription" cols=20 rows=8 placeholder='Description'  class='rounded mb-2 p-1'></textarea>
+                    </div>
             
-                <span class='description'><%= el.description %></span>
+                    <!-- <input type="text" placeholder="description" name='todoDescription'> -->
+                    <input type="text" placeholder="Tag" name='todoTag' class='rounded mb-2 p-2'>
+                    <input type="submit" class="bg-red-400 rounded  px-3 py-2 text-rose-100 font-bold">
+                </form>
            
-            <span><%= el.tag %></span>
-            <span class='del'> Delete </span>
-        </li>
+                <ul class='flex flex-wrap gap-3'>
+                <% todos.forEach( el => { %>
+                    <li class='todoItem flex-column border-solid text-gray-600' data-id='<%=el._id%>'>
+                        <div class='p-1 rounded-t bg-red-100 font-semibold flex-auto w-40 <%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></div>
+                        
+                            <div class='description p-2 bg-red-100 flex-auto w-40'><%= el.description %></div>
+                       
+                        <div class='bg-red-100 flex-auto w-40 p-2'><%= el.tag %></div>
+                        <div class='del rounded-b bg-red-100 p-1 flex-auto w-40 p-2'>Delete</div>
+                    </li>
+            
+                <% }) %>    
+                </ul>
+            </main>
+      
+       
+   
+           
+                
+                
+                
+                
+                
+          
+            
+   
 
-    <% }) %>    
-    </ul>
-
-
-
-    <h2>Things left to do: <%= left %></h2>
-
-    <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Task" name='todoItem'>
-        <div>
-            <textarea name="todoDescription" cols=16 rows=11 placeholder='Description'></textarea>
-        </div>
-
-        <!-- <input type="text" placeholder="description" name='todoDescription'> -->
-        <input type="text" placeholder="Tag" name='todoTag'>
-        <input type="submit">
-    </form>
 
     <script src="js/main.js"></script>
 </body>

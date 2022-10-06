@@ -22,6 +22,7 @@ module.exports = {
         }
     },
     markComplete: async (req, res)=>{
+        console.log(req.body)
         try{
             await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
                 completed: true
@@ -33,6 +34,7 @@ module.exports = {
         }
     },
     markIncomplete: async (req, res)=>{
+        console.log(req.body)
         try{
             await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
                 completed: false
@@ -44,6 +46,7 @@ module.exports = {
         }
     },
     deleteTodo: async (req, res)=>{
+        console.log(req.body)
         console.log(req.body.todoIdFromJSFile)
         try{
             await Todo.findOneAndDelete({_id:req.body.todoIdFromJSFile})

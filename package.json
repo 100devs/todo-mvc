@@ -5,17 +5,21 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind:css": "postcss public/css/tailwind.css -o public/css/style.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.4.8",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongodb": "^3.6.5",
     "mongoose": "^5.12.3",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0"
   },
   "devDependencies": {
     "tailwindcss": "^3.1.8"
