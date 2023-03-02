@@ -11,10 +11,13 @@
     <h1>Todos</h1>
     <ul>
     <% todos.forEach( el => { %>
-        <li class='todoItem' data-id='<%=el._id%>'>
+        <li class='todoItem' data-id='<%=el._id%>' data-likes="<%=el.likes%>">
             <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
             <span class='del'> Delete </span>
+            <span><%= el.likes %></span>
+            <span class = 'like'>Like</span>
         </li>
+
     <% }) %>    
     </ul>
 
