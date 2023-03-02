@@ -10,6 +10,8 @@ router.put('/markComplete', todosController.markComplete)
 
 router.put('/markIncomplete', todosController.markIncomplete)
 
+router.put('/addLike', todosController.addLike)
+
 router.delete('/deleteTodo', todosController.deleteTodo)
 
 module.exports = router

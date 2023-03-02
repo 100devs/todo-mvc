@@ -12,7 +12,7 @@ module.exports = {
     },
     createTodo: async (req, res)=>{
         try{
-            await Todo.create({todo: req.body.todoItem, completed: false})
+            await Todo.create({todo: req.body.todoItem, completed: false, likes:0})
             console.log('Todo has been added!')
             res.redirect('/todos')
         }catch(err){
@@ -48,6 +48,17 @@ module.exports = {
             console.log('Deleted Todo')
             res.json('Deleted It')
         }catch(err){
+            console.log(err)
+        }
+    },
+    addLike: async (req,res)=>{
+        try {
+            await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
+                likes: +req.body.likesFromJSFile + 1
+            })
+            console.log('Added Like');
+            res.json('Added Like')      
+        } catch (err) {
             console.log(err)
         }
     }
