@@ -1,5 +1,7 @@
+// talk to db using mongoose
 const mongoose = require('mongoose')
 
+// we have schema
 const TodoSchema = new mongoose.Schema({
   todo: {
     type: String,
@@ -11,4 +13,5 @@ const TodoSchema = new mongoose.Schema({
   }
 })
 
+// exporting model
 module.exports = mongoose.model('Todo', TodoSchema)

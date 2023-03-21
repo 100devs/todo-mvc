@@ -15,6 +15,7 @@ Array.from(todoComplete).forEach((el)=>{
 })
 
 async function deleteTodo(){
+    // grab toDo from parent node (li) and it has a dataset (data-id)
     const todoId = this.parentNode.dataset.id
     try{
         const response = await fetch('todos/deleteTodo', {
