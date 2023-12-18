@@ -12,4 +12,8 @@ router.put('/markIncomplete', todosController.markIncomplete)
 
 router.delete('/deleteTodo', todosController.deleteTodo)
 
+router.put('/public', todosController.makePublicTodo)
+
+router.get('/public', todosController.getPublicTodos)
+
 module.exports = router
