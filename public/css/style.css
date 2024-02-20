@@ -13,16 +13,16 @@ body {
   align-items: left;
   padding-left: 5%;
   padding-top: 2.5%;  
-  background-color: #0d1b2a;
+  background-color: #561928;
 }
 
 h1{
-    color: #bbd0ff;
+    color: #C6DFF1;
     font-size: 5em;
     margin: 5px;
 }
 .todoItem{
-    color: #c8b6ff;
+    color: #DACDF1;
     font-size: 2em;
 }
 
@@ -31,7 +31,7 @@ h1{
     
 }
 h2{
-    color: #ffd6ff; 
+    color: #F7DAC3; 
     font-size: 3em;
 }
 
