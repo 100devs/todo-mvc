@@ -1,10 +1,46 @@
-h1{
-    color: red;
+/* // <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 300 to 900 */
+
+
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: left;
+  padding-left: 5%;
+  padding-top: 2.5%;  
+  background-color: #0d1b2a;
 }
+
+h1{
+    color: #bbd0ff;
+    font-size: 5em;
+    margin: 5px;
+}
+.todoItem{
+    color: #c8b6ff;
+    font-size: 2em;
+}
+
 .completed{
     text-decoration: line-through;
-    color: gray;
+    
 }
-.not{
-    text-decoration: underline;
+h2{
+    color: #ffd6ff; 
+    font-size: 3em;
 }
+
+@media only screen and (max-width: 480px) {
+    body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    }
+  }
