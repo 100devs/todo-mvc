@@ -34,6 +34,10 @@ h2{
     color: #F7DAC3; 
     font-size: 3em;
 }
+a{
+    color: #DACDF1;
+    font-size: 2em;    
+}
 
 @media only screen and (max-width: 480px) {
     body {
